@@ -1,0 +1,14 @@
+.row { max-width: 500px; }
+h1 { text-align: center; }
+
+.todos { margin: 0 0 1rem 0; }
+.todos .row:nth-of-type(even) { background: #F9F9F9; }
+.title { line-height: 37px; }
+.check, .remove { text-align: center; }
+.remove { display: none; color: #f04124; }
+.row:hover .remove { display: inherit; }
+.icon { font-size: 25px; cursor: pointer; }
+.fi-check { color: #c7c7c7; }
+
+.complete .fi-check { color: #43AC6A; }
+.complete .title { color: #e7e7e7; text-decoration: line-through; }
