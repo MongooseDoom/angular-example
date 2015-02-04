@@ -21,8 +21,11 @@ app.controller('todoCtrl', function ($scope) {
 		$scope.newTodo = '';
 	};
 
-	$scope.removeTodo = function(index){
-		$scope.todos.splice(index, 1);
+	$scope.removeTodo = function(todo){
+		var index = $scope.todos.indexOf(todo);
+		if (index != -1) {
+			$scope.todos.splice(index, 1);
+		}
 	};
 
 	$scope.toggleCompleted = function(todo){
@@ -31,10 +34,8 @@ app.controller('todoCtrl', function ($scope) {
 
 	// Extra Credit
 	$scope.clearCompleted = function(){
-		angular.forEach($scope.todos, function(todo, index) {
-			if (todo.completed) {
-				$scope.todos.splice(index, 1);
-			}
+		$scope.todos = $scope.todos.filter(function(todo) {
+			return !todo.completed;
 		});
 	};
 
