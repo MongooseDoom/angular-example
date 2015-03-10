@@ -28,10 +28,6 @@ app.controller('todoCtrl', function ($scope) {
 		}
 	};
 
-	$scope.toggleCompleted = function(todo){
-		todo.completed = !todo.completed;
-	};
-
 	// Extra Credit
 	$scope.clearCompleted = function(){
 		$scope.todos = $scope.todos.filter(function(todo) {
