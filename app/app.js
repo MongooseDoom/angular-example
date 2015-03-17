@@ -1,6 +1,4 @@
-var app = angular.module('todoApp', []);
-
-app.controller('todoCtrl', function ($scope) {
+angular.module('todoApp', []).controller('todoCtrl', function ($scope) {
 	$scope.todos = [
 		{title: "Make todo list app", completed: false},
 		{title: "???", completed: false},
